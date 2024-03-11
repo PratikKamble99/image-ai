@@ -1,5 +1,6 @@
 import MobileNav from '@/components/shared/mobile-nav';
 import Sidebar from '@/components/shared/sidebar';
+import { Toaster } from '@/components/ui/toaster';
 import React from 'react'
 
 const RootLayout = ({
@@ -18,6 +19,7 @@ const RootLayout = ({
                 {children}
             </div>
         </div>
+        <Toaster />
     </main>
   )
 }

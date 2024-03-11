@@ -1,10 +1,18 @@
-import React from 'react'
+import React from 'react';
 
-const Header = () => {
+interface Props {
+  title: string,
+  subTitle?: string
+}
+
+const Header = ({title, subTitle}:Props) => {
   return (
-    <div>
-      Header
-    </div>
+    <>
+    <h2 className="h2-bold text-dark-600">
+      {title}
+    </h2>
+    <p className="p-16-regular mt-4">{subTitle}</p>
+    </>
   )
 }
 

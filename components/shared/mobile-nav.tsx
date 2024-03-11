@@ -3,6 +3,7 @@
 import React from 'react'
 import {
     Sheet,
+    SheetClose,
     SheetContent,
     SheetTrigger,
   } from "@/components/ui/sheet"
@@ -54,14 +55,16 @@ const MobileNav = () => {
                                     const isActive = nav.route === pathname;
                                     return (
                                         <li key={nav.route} className={`${isActive && 'gradient-text'} p-18 flex whitespace-nowrap text-gray-700`}>
-                                            <Link href={nav.route} className='sidebar-link cursor-pointer '>
-                                                <Image src={nav.icon} alt={nav.label} width={24} height={24} />
-                                                {nav.label}
-                                            </Link>
+                                            <SheetClose asChild>
+                                                <Link href={nav.route} className='sidebar-link cursor-pointer'>
+                                                    <Image src={nav.icon} alt={nav.label} width={24} height={24} />
+                                                    {nav.label}
+                                                </Link>
+                                            </SheetClose>
                                         </li>
                                     )
                                 })}
-                                <li className='flex-center cursor-pointer gap-2 p-4'>
+                                <li className='flex-center cursor-pointer gap-2 p-4 '>
                                     <UserButton afterSignOutUrl='/' showName/>
                                 </li>
                             </ul>
@@ -70,8 +73,8 @@ const MobileNav = () => {
                 </Sheet>
             </SignedIn>
             <SignedOut>
-                <Button>
-                  <Link href='/sign-in' className='bg-purple-gradient bg-cover'>Login</Link>
+                <Button className='bg-purple-gradient bg-cover'>
+                  <Link href='/sign-in' >Login</Link>
                 </Button>
           </SignedOut>
         </nav>

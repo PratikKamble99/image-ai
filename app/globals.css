@@ -84,7 +84,7 @@
 }
 
 .root-container {
-  @apply mt-16 flex-1 overflow-auto py-8 lg:mt-0  lg:py-10
+  @apply mt-16 flex-1 overflow-auto py-8 lg:mt-0  lg:py-10 lg:ml-72
 }
 
 /* ========================================== TAILWIND STYLES */
@@ -312,7 +312,7 @@
 
   /* Sidebar Component */
   .sidebar {
-    @apply hidden min-h-screen w-72 bg-white p-5 shadow-md shadow-purple-200/50 lg:flex;
+    @apply fixed overflow-auto hidden h-screen w-72 bg-white p-5 shadow-md shadow-purple-200/50 lg:flex ;
   }
 
   .sidebar-logo {

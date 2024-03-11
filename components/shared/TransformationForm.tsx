@@ -120,7 +120,7 @@ const TransformationForm = ({data=null, action, userId, type, creditBalance, con
           });
 
           if(updatedImage){
-            router.push(`/transformation/${updatedImage._id}`)
+            router.push(`/transformations/${updatedImage._id}`)
           }
         } catch (error) {
           console.log(error)

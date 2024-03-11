@@ -6,6 +6,11 @@ import { Collection } from "@/components/shared/Collection";
 import Header from "@/components/shared/Header";
 import { getUserById } from "@/lib/actions/user.actions";
 import { getUserImages } from "@/lib/actions/image.action";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'profile',
+}
 
 const Profile = async ({ searchParams }: SearchParamProps) => {
   const page = Number(searchParams?.page) || 1;
